@@ -1,0 +1,27 @@
+ul{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+}
+
+li
+{
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 9px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+li .sno{
+  font-weight: bold;
+  font-size: 10px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

@@ -1,0 +1,10 @@
+<h1>Books</h1>
+<!-- <button  (click)="isShowing = !isShowing">
+  {{isShowing ? 'Hide Book' : 'Show Book'}}
+</button> -->
+
+<ul>
+  <ng-container *ngFor="let booklist of books; let i = index">
+    <app-book (bookemitter) ="addToCart($event)" [book]="booklist"></app-book>
+  </ng-container>
+</ul>
