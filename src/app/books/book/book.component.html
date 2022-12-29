@@ -1,8 +1,12 @@
+<li class="book ">
+  <!-- <p class="sno">{{i+1}}</p> -->
+  <img [src]="book.image" alt="{{ book.name }}" width="" />
+  <h4 class="font-semibold">
+    {{ book.name | titlecase }} by {{ book.author | titlecase }}
+  </h4>
+  <h5 class="amount">{{ book.amount | currency : "INR" }}</h5>
 
- <li class="book">
-    <!-- <p class="sno">{{i+1}}</p> -->
-    <img [src]="book.image" alt="{{book.name}}" width="150" />
-    <h4 class="title">{{book.name | titlecase}} by {{book.author | titlecase}}</h4>
-    <h5 class="price">{{book.amount | currency:'INR'}} </h5>
-    <button (click)="addToCart()">Add to Cart</button>
- </li>
+  <button *ngIf="!isInCart"(click)="addToCart()" type="button" >Add to Cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()">Remove</button>
+</li>
+

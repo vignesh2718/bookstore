@@ -1,3 +1,11 @@
+.header{
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin:auto;
+  text-align: center;
+  padding: 10px;
+}
 ul{
   display: flex;
   flex-wrap: wrap;
@@ -24,4 +32,7 @@ li .sno{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+img{
+  width:40px;
 }

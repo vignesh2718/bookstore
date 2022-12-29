@@ -16,14 +16,11 @@ export class BooksComponent implements OnInit {
     }
   books: Book[] = [];
 
-  card :Book[] = [];
+  cart :Book[] = [];
 
 
 
   ngOnInit(): void {}
-  
-addToCart(book:Book){
-  console.log(book);
 
-}
+
 }

@@ -1,6 +1,27 @@
+<nav class="
+flex justify-between p-4 bg-blue-800 text-white font-bold
+">
+  <div>
+    <a routerLink="home" routerLinkActive="active"> BookShop 📚</a>
 
-  <div><app-books></app-books>
-  <router-outlet></router-outlet></div>
+  </div>
+  <div>
+      <a class="mx-4" routerLink="/cart" routerLinkActive="active">MyCart 🛍️</a>
+      <ng-container *ngIf="!isAuthenticated()">
+        <a class="mx-4" routerLink="/login" routerLinkActive="active">Login</a>
+      <a class="mx-4" routerLink="/register" routerLinkActive="active">Register</a>
+      </ng-container>
+      <ng-container *ngIf="isAuthenticated()">
+        <!-- <a class="mx-4" routerLink="/profile" routerLinkActive="active">Profile</a> -->
+        <a class="mx-4" (click)="logout()">Login</a>
+      </ng-container>
+  </div>
+
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
 
 
 

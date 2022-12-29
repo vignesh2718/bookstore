@@ -101,7 +101,7 @@ export class BooksService {
       },
       {
         image: 'https://m.media-amazon.com/images/I/41neJOXyNQL.jpg',
-        name: 'THow to Think Like Benjamin Graham and Invest Like Warren Buffett',
+        name: 'Thow to Think Like Benjamin Graham and Invest Like Warren Buffett',
         author: 'Lawrence Cunningham',
         amount: 1066.98,
       },

@@ -1,0 +1,23 @@
+<h2 class="title">Your Cart 🛒</h2>
+<div>
+  <div *ngIf="getCart().length > 0">
+    <div *ngFor="let book of getCart(); let i = index">
+      <div class="box">
+        <!-- <p class="sno">{{ i + 1 }}</p> -->
+        <img [src]="book.image"  alt="image" class="image" />
+        <h3> {{ book.name }}</h3>
+        <h3>By - {{ book.author }}</h3>
+        <p class="amount">{{ book.amount | currency : "INR" }}</p>
+        <button
+        
+     type="button" >
+
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="getCart().length == 0" class="empty">
+  <p>Your cart is empty</p>
+</div>
